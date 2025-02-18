@@ -1,0 +1,84 @@
+
+<div>
+
+
+    <h3>Atualizar Processo por NPU:</h3>
+
+    <form  #atualizaProcessoPorNPUForm="ngForm" (ngSubmit)="atualizarProcessoPorNpu()">
+
+        <mat-form-field>
+            <mat-label>NPU: </mat-label>
+            <input matInput name="npu" [(ngModel)]="processoDTO.npu" >
+            <mat-hint class="color">Required</mat-hint>
+        </mat-form-field>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field >
+            <mat-label>Data de Cadastro: </mat-label>
+            <input matInput name="data_cadastro" [(ngModel)]="processoDTO.data_cadastro"/>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field>
+            <mat-label>Data de Visualização: </mat-label>
+            <input matInput   name="data_visualizacao" [(ngModel)]="processoDTO.data_visualizacao"/>
+            <mat-hint class="color">MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <br/><br/>
+
+        <mat-form-field appearance="fill">
+            <mat-label>UF: </mat-label>
+            <select #estados name="estado" matNativeControl required (change)="onChangeEstado(estados.value)">
+                <option *ngFor ="let valor of respostaUF" value="{{valor.id}}" >{{valor.sigla}}</option>
+            </select>
+            <mat-hint class="color">Always click to choose</mat-hint>
+        </mat-form-field>
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field appearance="fill">
+            <mat-label>Município: </mat-label>
+            <select #municipio matNativeControl required (change)="onChangeMunicipio(municipio.value)">
+                <option *ngFor ="let valor of respostaMunicipio" value="{{valor.id}}">{{valor.nome}}</option>
+            </select>
+            <mat-hint class="color">Always click to choose</mat-hint>
+        </mat-form-field>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field>
+            <mat-label>PDF: </mat-label>
+            <input matInput type="file" name="pdf" [(ngModel)]="pdf" />
+        </mat-form-field>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <br/><br/>
+
+        <div >
+            <button mat-flat-button style="background-color:rgb(127, 143, 211);" (click)="atualizarProcessoPorNpu()">Submit</button> 
+        </div>
+    </form>
+
+    <div *ngIf="atualizaRespostaProcessoPorNpu" >
+        <br/>
+        <div>
+            <textarea class="todosProcessosTextArea" readonly>{{respostaAtualizaProcessoPorNpu}}</textarea>
+            <div>
+                <button mat-flat-button style="background-color:rgb(127, 143, 211);" (click)="hidePanel()">Close</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button mat-flat-button style="background-color:rgb(127, 143, 211);" (click)="clearAllFields(atualizaProcessoPorNPUForm)" >Clean</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,62 @@
+
+<div class="expansion">
+  <br/>
+  <h1>&nbsp;&nbsp;&nbsp;Cadastro de Processos</h1>
+
+  <mat-accordion>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Processos&nbsp;&nbsp;&nbsp;</mat-panel-title>
+        <mat-panel-description>Consultar todos os processos.</mat-panel-description>
+      </mat-expansion-panel-header>
+      
+      <app-processo-todos></app-processo-todos>
+      
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Processos&nbsp;&nbsp;</mat-panel-title>
+        <mat-panel-description>Consultar processo por npu.</mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-processo-npu></app-processo-npu>
+    </mat-expansion-panel>
+
+    
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Cadastros&nbsp;&nbsp;&nbsp;&nbsp;</mat-panel-title>
+        <mat-panel-description>Cadastro de novos processos.</mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-processo-cadastro></app-processo-cadastro>
+    </mat-expansion-panel>
+
+    
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Atualização</mat-panel-title>
+        <mat-panel-description>Atualizar processo por npu.</mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-processo-atualizar></app-processo-atualizar>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Excluir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-panel-title>
+        <mat-panel-description>Excluir processo por npu.</mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-processo-excluir></app-processo-excluir>
+    </mat-expansion-panel> 
+
+  </mat-accordion>
+
+  
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "d91a0263-4416-4fb7-8276-cd908647e3a4",
+		"name": "Processos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33701840",
+		"_collection_link": "https://galactic-shuttle-249246.postman.co/workspace/New-Team-Workspace~613a82b4-db0e-4fa8-b0e3-243efe9d4e83/collection/33701840-d91a0263-4416-4fb7-8276-cd908647e3a4?action=share&source=collection_link&creator=33701840"
+	},
+	"item": [
+		{
+			"name": "All Processos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/v1/api/processos/all?page=0&size=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"processos",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Processo by npu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/v1/api/processos/6666666-66.6666.6.66.6666",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"processos",
+						"6666666-66.6666.6.66.6666"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Processo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"npu\":\"6666666-66.6666.6.66.6666\",\n    \"data_cadastro\":\"2025-12-01\",\n    \"data_visualizacao\":\"2025-12-01\",\n    \"municipio\":\"Petrolina\",\n    \"uf\":\"PE\",\n    \"pdf\":null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/v1/api/processos/cadastros",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"processos",
+						"cadastros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Processo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"npu\":\"6666666-66.6666.6.66.6666\",\n    \"data_cadastro\":\"2025-12-01\",\n    \"data_visualizacao\":\"2025-12-02\",\n    \"municipio\":\"Garanhuns\",\n    \"uf\":\"PE\",\n    \"pdf\":null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/v1/api/processos/atualizar",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"processos",
+						"atualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Processo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/v1/api/processos/6666666-66.6666.6.66.6666",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"processos",
+						"6666666-66.6666.6.66.6666"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
