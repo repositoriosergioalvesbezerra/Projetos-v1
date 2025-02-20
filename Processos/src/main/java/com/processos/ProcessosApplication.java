@@ -25,7 +25,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 		),
 		externalDocs = @ExternalDocumentation(
 				description = "Aplicação Cadastro de Processos REST API Documentation",
-				url= "https://github.com/repositoriosergioalvesbezerra/projetos"
+				url= "https://github.com/repositoriosergioalvesbezerra/Projetos-v1"
 		)
 
 )
